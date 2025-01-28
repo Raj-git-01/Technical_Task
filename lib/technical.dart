@@ -105,14 +105,17 @@ class _DockState<T> extends State<Dock<T>> {
           padding: const EdgeInsets.all(4),
           child: Row(
             mainAxisSize: MainAxisSize.min,
-            children: List.generate(_items.length, (index) {
-              return widget.builder(
-                _items[index],
-                index,
-                () {},
-                () {},
-              );
-            }),
+            children: List.generate(
+              _items.length,
+              (index) {
+                return widget.builder(
+                  _items[index],
+                  index,
+                  () {},
+                  () {},
+                );
+              },
+            ),
           ),
         );
       },
